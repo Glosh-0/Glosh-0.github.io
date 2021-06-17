@@ -120,9 +120,6 @@
                                 <button id="id_1171777">Закатолапа</button><br>
                                 <button id="id_1288305">Заплутавший</button><br>
                             </li>
-                            <li><br><b><a>И</a></b><br>
-                            <button id="id_659021">Искорёженный Провидец</button><br>
-                            </li>
                             <li><br><b><a>К</a></b><br>
                                 <button id="id_262490">Кривая Улыбка</button><br>
                                 <button id="id_1101992">Крадущий Паутину</button><br>
@@ -137,6 +134,8 @@
                             </li>
                             <li><br><b><a>М</a></b><br>
                                 <button id="id_1142909">Маковка</button><br>
+                                <button id="id_712640">Малодушие</button><br>
+                                <button id="id_174747">Мертворождённый Оленёнок</button><br>
                             </li>
                             <li><br><b><a>Н</a></b><br>
                                 <button id="id_815221">Наст</button><br>
@@ -176,6 +175,7 @@
                             </li>
                             <li><br><b><a>У</a></b><br>
                                 <button id="id_1006554">Успокаивающелапа</button><br>
+                                <button id="id_1091309">Узор</button><br>
                             </li>
                             <li><br><b><a>Ц</a></b><br>
                                 <button id="id_748150">Цветущий Сумрак</button><br>
@@ -216,7 +216,7 @@
  участок: +;
  участок: +.
 Общее количество паутины за день: n.
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Искорёженный Провидец.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
 
 Разбирайте участки: 1-2, 3-4, 5-6, 7-8, 9-10, 11-12, 13-14, 15-16.
 `)});
@@ -224,7 +224,7 @@
  участок: +;
  участок: +.
 Общее количество паутины за день: n.
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Искорёженный Провидец.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
 
 Разбирайте участки: 1-2, 3-4, 5-6,  7-8, 9-10, 11-12, 13-14, 15-16, 17-18.
 `)});
@@ -238,7 +238,7 @@
 13 и 14 - 
 15 и 16 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Искорёженный Провидец.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
 `)});
         $("#y_uch").click(function(){$("#gather_text").val($("#gather_text").val() + `1 и 2 - 
 3 и 4 - 
@@ -250,7 +250,7 @@
 15 и 16 - 
 17 и 18 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Искорёженный Провидец.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
 `)});
 
  $("#drobi").click(function(){$("#gather_text").val($("#gather_text").val() + `Дробные участки занимаются в любой последовательности. 
@@ -280,7 +280,6 @@
         $("#id_1036303").click(function(){$("#gather_text").val($("#gather_text").val() + "@id516307929 (Помутнение Рассудка);")});
         $("#id_1150092").click(function(){$("#gather_text").val($("#gather_text").val() + "@id491364582 (Куцость);")});
         $("#id_1191564").click(function(){$("#gather_text").val($("#gather_text").val() + "@id424273784 (Тайностная);")});
-        $("#id_659021").click(function(){$("#gather_text").val($("#gather_text").val() + "@id475865549 (Искорёженный Провидец);")});
         $("#id_1217073").click(function(){$("#gather_text").val($("#gather_text").val() + "@id460463845 (Пятнистый);")});
         $("#id_1276970").click(function(){$("#gather_text").val($("#gather_text").val() + "@id321305223 (Непослушная Кудряшка);")});
         $("#id_1221254").click(function(){$("#gather_text").val($("#gather_text").val() + "@id442728760 (Пихтолапый);")});
@@ -307,6 +306,9 @@
         $("#id_1225419").click(function(){$("#gather_text").val($("#gather_text").val() + "@id343799240 (Трепетанье);")});
         $("#id_1223867").click(function(){$("#gather_text").val($("#gather_text").val() + "@id633202391 (Лисий Дух);")});
         $("#id_1128638").click(function(){$("#gather_text").val($("#gather_text").val() + "@id519504471 (Водяной);")});
+        $("#id_712640").click(function(){$("#gather_text").val($("#gather_text").val() + "@id403421298 (Малодушие);")});
+        $("#id_174747").click(function(){$("#gather_text").val($("#gather_text").val() + "@id517253716 (Мертворождённый Оленёнок);")});
+        $("#id_1091309").click(function(){$("#gather_text").val($("#gather_text").val() + "@id246646833 (Узор);")});
     </script>
 </div>
 
@@ -434,6 +436,7 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat557452">Врождённое Неповиновение</a> (<a href="https://vk.com/id370517672">VK</a>)<br>
       <a href="https://catwar.su/cat1242238">Веяние</a> (<a href="https://vk.com/id518133077">VK</a>)<br>
       <a href="https://catwar.su/cat1294920">Воркотание</a> (<a href="https://vk.com/id563856636">VK</a>)<br>
+      <a href="https://catwar.su/cat1128638">Водяной</a> (<a href="https://vk.com/id519504471">VK</a>)<br>
       <br><b>Д</b><br>
       <a href="https://catwar.su/cat1291514">Даль</a> (<a href="https://vk.com/id557163461">VK</a>)<br>
       <br><b>Е</b><br>
@@ -447,20 +450,23 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat659021">Искорёженный Провидец</a> (<a href="https://vk.com/id475865549">VK</a>)<br>
       <br><b>К</b><br>
       <a href="https://catwar.su/cat262490">Кривая Улыбка</a> (<a href="https://vk.com/id325032942">VK</a>)<br>
-      <span class="frozen"><a href="https://catwar.su/cat1150092">Куцость</a> (<a href="https://vk.com/id491364582">VK</a>)</span> [Заморожен с 03.06 до 10.07]<br>
+      <a href="https://catwar.su/cat1150092">Куцость</a> (<a href="https://vk.com/id491364582">VK</a>)<br>
       <a href="https://catwar.su/cat1293224">Криводушие</a> (<a href="https://vk.com/id534552674">VK</a>)<br>
       <br><b>Л</b><br>
       <a href="https://catwar.su/cat1228037">Лживый</a> (<a href="https://vk.com/id498482389">VK</a>)<br>
       <a href="https://catwar.su/cat1279598">Лебедекрылый</a> (<a href="https://vk.com/id646166902">VK</a>)<br>
       <a href="https://catwar.su/cat1290199">Львуша</a> (<a href="https://vk.com/id487708972">VK</a>)<br>
+      <a href="https://catwar.su/cat1223867">Лисий Дух</a> (<a href="https://vk.com/id633202391">VK</a>)<br>
       <br><b>М</b><br>
       <a href="https://catwar.su/cat1142909">Маковка</a> (<a href="https://vk.com/id316649308">VK</a>)<br>
+      <a href="https://catwar.su/cat712640">Малодушие</a> (<a href="https://vk.com/id403421298">VK</a>)<br>
+      <a href="https://catwar.su/cat174747">Мертворождённый Оленёнок</a> (<a href="https://vk.com/id517253716">VK</a>)<br>
       <br><b>Н</b><br>
       <a href="https://catwar.su/cat815221">Наст</a> (<a href="https://vk.com/id39409026">VK</a>)<br>
       <a href="https://catwar.su/cat1208140">Нелепый Зверёк</a> (<a href="https://vk.com/id316361224">VK</a>)<br>
       <a href="https://catwar.su/cat1152101">Небосвод</a> (<a href="https://vk.com/id533242797">VK</a>)<br>
       <a href="https://catwar.su/cat1124675">Неодушевлённый</a> (<a href="https://vk.com/id487775787">VK</a>)<br>
-      <span class="frozen"><a href="https://catwar.su/cat1276970">Непослушная Кудряшка</a> (<a href="https://vk.com/id321305223">VK</a>)</span> [Заморожена с 21.05 до 01.07]<br>
+      <a href="https://catwar.su/cat1276970">Непослушная Кудряшка</a> (<a href="https://vk.com/id321305223">VK</a>)<br>
       <a href="https://catwar.su/cat1261041">Напев</a> (<a href="https://vk.com/id383885399">VK</a>)<br>
       <a href="https://catwar.su/cat1243103">Недотрога</a> (<a href="https://vk.com/id615589646">VK</a>)<br>
       <br><b>О</b><br>
@@ -471,11 +477,11 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat873478">Подозрение</a> (<a href="https://vk.com/id180297436">VK</a>)<br>
       <a href="https://catwar.su/cat1210276">Паутина Лжи</a> (<a href="https://vk.com/id454860308">VK</a>)<br>
       <a href="https://catwar.su/cat1217073">Пятнистый</a> (<a href="https://vk.com/id460463845">VK</a>)<br>
-      <span class="frozen"><a href="https://catwar.su/cat1221254">Пихтолапый</a> (<a href="https://vk.com/id442728760">VK</a>)</span> [Заморожен с 30.05 до 30.06]<br>
+      <a href="https://catwar.su/cat1221254">Пихтолапый</a> (<a href="https://vk.com/id442728760">VK</a>)<br>
       <a href="https://catwar.su/cat1036303">Помутнение Рассудка</a> (<a href="https://vk.com/id516307929">VK</a>)<br>
       <a href="https://catwar.su/cat1298283">Плутовство</a> (<a href="https://vk.com/id583449344">VK</a>)<br>
       <br><b>Р</b><br>
-      <span class="frozen"><a href="https://catwar.su/cat1266536">Растрёпанный</a> (<a href="https://vk.com/id636261438">VK</a>)</span> [Заморожен с 13.06 до 31.07]<br>
+      <a href="https://catwar.su/cat1266536">Растрёпанный</a> (<a href="https://vk.com/id636261438">VK</a>)<br>
       <a href="https://catwar.su/cat1271617">Рёв Зверя</a> (<a href="https://vk.com/id646716362">VK</a>)<br>
       <br><b>С</b><br>
       <a href="https://catwar.su/cat1132933">Серебрянолистая</a> (<a href="https://vk.com/id339711855">VK</a>)<br>
@@ -483,22 +489,18 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat1274683">Содрогание</a> (<a href="https://vk.com/id646716362">VK</a>)<br>
       <br><b>Т</b><br>
       <a href="https://catwar.su/cat1191564">Тайностная</a> (<a href="https://vk.com/id424273784">VK</a>)<br>
+      <a href="https://catwar.su/cat1225419">Трепетанье</a> (<a href="https://vk.com/id343799240">VK</a>)<br>
       <br><b>У</b><br>
       <a href="https://catwar.su/cat1006554">Успокаивающелапа</a> (<a href="https://vk.com/id398466859">VK</a>)<br>
+      <a href="https://catwar.su/cat1091309">Узор</a> (<a href="https://vk.com/id246646833">VK</a>)<br>
       <br><b>Ц</b><br>
       <a href="https://catwar.su/cat748150">Цветущий Сумрак</a> (<a href="https://vk.com/id326501785">VK</a>)<br>
       <br><b>Ч</b><br>
       <a href="https://catwar.su/cat1258308">Чёрный Пёс</a> (<a href="https://vk.com/id570784447">VK</a>)<br>
-      <br><b>Э</b><br>
-      <br><b>Ю</b><br>
-      <p style="text-align: center; font-weight: bold;">ИСники</p>
-      <a href="https://catwar.su/cat1225419">Трепетанье</a> (<a href="https://vk.com/id343799240">VK</a>) [ИС до 14.06]<br>
-      <a href="https://catwar.su/cat1223867">Лисий Дух</a> (<a href="https://vk.com/id633202391">VK</a>) [ИС до 16.06]<br>
-      <a href="https://catwar.su/cat??">Водяной</a> (<a href="https://vk.com/id??">VK</a>) [ИС до ??.06]<br>
   </center>
 </div>
 </div>
-<div style="font-size: smaller; text-align: right;">Последнее обновление: 10.06</div>
+<div style="font-size: smaller; text-align: right;">Последнее обновление: 17.06</div>
 </div>
 <script>
 $("a").attr('target', '_blank');
