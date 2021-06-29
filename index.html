@@ -140,7 +140,6 @@
                             <li><br><b><a>Н</a></b><br>
                                 <button id="id_815221">Наст</button><br>
                                 <button id="id_1152101">Небосвод</button><br>
-                                <button id="id_1124675">Неодушевлённый</button><br>
                                 <button id="id_1276970">Непослушная Кудряшка</button><br>
                                 <button id="id_1243103">Недотрога</button><br>
                             </li>
@@ -155,9 +154,10 @@
                                 <button id="id_1217073">Пятнистый</button><br>
                                 <button id="id_1221254">Пихтолапый</button><br>
                                 <button id="id_1036303">Помутнение Рассудка</button><br>
+                                <button id="id_1124675">Потерянная Душа</button><br>
+
                             </li>
                             <li><br><b><a>Р</a></b><br>
-                                <button id="id_1266536">Растрёпанный</button><br>
                                 <button id="id_1271617">Рёв Зверя</button><br>
                             </li>
                             <li><br><b><a>С</a></b><br>
@@ -213,7 +213,7 @@
  участок: +;
  участок: +.
 Общее количество паутины за день: n.
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Потерянная Душа.
 
 Разбирайте участки: 1-2, 3-4, 5-6, 7-8, 9-10, 11-12, 13-14, 15-16.
 `)});
@@ -221,7 +221,7 @@
  участок: +;
  участок: +.
 Общее количество паутины за день: n.
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Потерянная Душа.
 
 Разбирайте участки: 1-2, 3-4, 5-6, 7-8, 9-10, 11-12, 13-14, 15-16, 17-18.
 `)});
@@ -235,7 +235,7 @@
 13 и 14 - 
 15 и 16 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Потерянная Душа.
 `)});
         $("#y_uch").click(function(){$("#gather_text").val($("#gather_text").val() + `1 и 2 - 
 3 и 4 - 
@@ -247,7 +247,7 @@
 15 и 16 - 
 17 и 18 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи.
+Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Паутина Лжи, Потерянная Душа.
 `)});
 
  $("#drobi").click(function(){$("#gather_text").val($("#gather_text").val() + `Дробные участки занимаются в любой последовательности. 
@@ -270,7 +270,6 @@
         $("#id_1210276").click(function(){$("#gather_text").val($("#gather_text").val() + "@id454860308 (Паутина Лжи);")});
         $("#id_1152101").click(function(){$("#gather_text").val($("#gather_text").val() + "@id533242797 (Небосвод);")});
         $("#id_1259771").click(function(){$("#gather_text").val($("#gather_text").val() + "@id476483330 (Самоуверенный);")});
-        $("#id_1266536").click(function(){$("#gather_text").val($("#gather_text").val() + "@id636261438 (Растрёпанный);")});
         $("#id_1258308").click(function(){$("#gather_text").val($("#gather_text").val() + "@id570784447 (Чёрный Пёс);")});
         $("#id_1036303").click(function(){$("#gather_text").val($("#gather_text").val() + "@id516307929 (Помутнение Рассудка);")});
         $("#id_1150092").click(function(){$("#gather_text").val($("#gather_text").val() + "@id491364582 (Куцость);")});
@@ -279,7 +278,7 @@
         $("#id_1276970").click(function(){$("#gather_text").val($("#gather_text").val() + "@id321305223 (Непослушная Кудряшка);")});
         $("#id_1221254").click(function(){$("#gather_text").val($("#gather_text").val() + "@id442728760 (Пихтолапый);")});
         $("#id_1279598").click(function(){$("#gather_text").val($("#gather_text").val() + "@id646166902 (Лебедекрылый);")});
-        $("#id_1124675").click(function(){$("#gather_text").val($("#gather_text").val() + "@id487775787 (Неодушевлённый);")});
+        $("#id_1124675").click(function(){$("#gather_text").val($("#gather_text").val() + "@id487775787 (Потерянная Душа);")});
         $("#id_1261041").click(function(){$("#gather_text").val($("#gather_text").val() + "@id383885399 (Мимолётное Видение);")});
         $("#id_1290199").click(function(){$("#gather_text").val($("#gather_text").val() + "@id487708972 (Львуша);")});
         $("#id_557452").click(function(){$("#gather_text").val($("#gather_text").val() + "@id370517672 (Врождённое Неповиновение);")});
@@ -458,7 +457,6 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <br><b>Н</b><br>
       <a href="https://catwar.su/cat815221">Наст</a> (<a href="https://vk.com/id39409026">VK</a>)<br>
       <a href="https://catwar.su/cat1152101">Небосвод</a> (<a href="https://vk.com/id533242797">VK</a>)<br>
-      <a href="https://catwar.su/cat1124675">Неодушевлённый</a> (<a href="https://vk.com/id487775787">VK</a>)<br>
       <a href="https://catwar.su/cat1276970">Непослушная Кудряшка</a> (<a href="https://vk.com/id321305223">VK</a>)<br>
       <a href="https://catwar.su/cat1243103">Недотрога</a> (<a href="https://vk.com/id615589646">VK</a>)<br>
       <br><b>О</b><br>
@@ -471,8 +469,8 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat1217073">Пятнистый</a> (<a href="https://vk.com/id460463845">VK</a>)<br>
       <a href="https://catwar.su/cat1221254">Пихтолапый</a> (<a href="https://vk.com/id442728760">VK</a>)<br>
       <a href="https://catwar.su/cat1036303">Помутнение Рассудка</a> (<a href="https://vk.com/id516307929">VK</a>)<br>
+      <a href="https://catwar.su/cat1124675">Потерянная Душа</a> (<a href="https://vk.com/id487775787">VK</a>)<br>
       <br><b>Р</b><br>
-      <a href="https://catwar.su/cat1266536">Растрёпанный</a> (<a href="https://vk.com/id636261438">VK</a>)<br>
       <a href="https://catwar.su/cat1271617">Рёв Зверя</a> (<a href="https://vk.com/id646716362">VK</a>)<br>
       <br><b>С</b><br>
       <a href="https://catwar.su/cat1132933">Серебрянолистая</a> (<a href="https://vk.com/id339711855">VK</a>)<br>
@@ -492,7 +490,7 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
   </center>
 </div>
 </div>
-<div style="font-size: smaller; text-align: right;">Последнее обновление: 27.06</div>
+<div style="font-size: smaller; text-align: right;">Последнее обновление: 29.06</div>
 </div>
 <script>
 $("a").attr('target', '_blank');
