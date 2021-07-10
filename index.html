@@ -81,10 +81,10 @@
                     <h3>Кнопки сбора</h3>
                     <br> 
                     <div id="button_gather">
-                        <button id="mog_popr">Можете попросить</button>
                         <button id="drobi">Дроби</button>
                         <button id="g_uch">Участки - чел (План 1)</button>
                         <button id="y_uch">Участки - чел (План 2)</button>
+                        <button id="uuu">Ленивый Я</button>
                         <button id="razd">Раздача</button>
                         <button id="smena">Смена карты</button>
                         <button id="it_day_g">Итоги дня (План 1)</button>
@@ -111,8 +111,12 @@
                                 <button id="id_1276481">Возродившаяся</button><br>
                                 <button id="id_1109237">Взвывание</button><br>
                             </li>
+                            <li><br><b><a>Г</a></b><br>
+                                <button id="id_1239754">Гордоволк</button><br>
+                            </li>
                             <li><br><b><a>Д</a></b><br>
                                 <button id="id_1291514">Даль</button><br>
+                                <button id="id_1084881">Дурьё</button><br>
                             </li>
                             <li><br><b><a>Е</a></b><br>
                                 <button id="id_569598">Ежик</button><br>
@@ -121,7 +125,7 @@
                                 <button id="id_1288305">Желанный Покой</button><br>
                             </li>
                             <li><br><b><a>З</a></b><br>
-                                <button id="id_1171777">Закатолапа</button><br>
+                                <button id="id_1171777">Закатоликая</button><br>
                             </li>
                             <li><br><b><a>К</a></b><br>
                                 <button id="id_1101992">Крадущий Паутину</button><br>
@@ -143,18 +147,18 @@
                                 <button id="id_1276970">Непослушная Кудряшка</button><br>
                                 <button id="id_1243103">Недотрога</button><br>
                                 <button id="id_1313504">Надеждолап</button><br>
+                                <button id="id_1313784">Невежественнолап</button><br>
                             </li>
                             <li><br><b><a>О</a></b><br>
                                 <button id="id_558232">Огнедышащий</button><br>
                                 <button id="id_1282632">Опасение</button><br>
-                                <button id="id_1224701">Осинник</button><br>
                                 <button id="id_1267275">Остроцапый</button><br>
                             </li>
                             <li><br><b><a>П</a></b><br>
                                 <button id="id_873478">Подозрение</button><br>
                                 <button id="id_1210276">Паутина Лжи</button><br>
                                 <button id="id_1217073">Пятнистый</button><br>
-                                <button id="id_1221254">Пихтолапый</button><br>
+                                <button id="id_1221254">Пихтовый</button><br>
                                 <button id="id_1036303">Помутнение Рассудка</button><br>
                                 <button id="id_1124675">Потерянная Душа</button><br>
                             </li>
@@ -183,7 +187,7 @@
                                 <button id="id_1258308">Чёрный Пёс</button><br>
                             </li>
                             <li><br><b><a>Ш</a></b><br>
-                                <button id="id_636190">Шаловливолап</button><br>
+                                <button id="id_636190">Шаловливый</button><br>
                             </li>
                         </ul>
                     </div>
@@ -258,6 +262,25 @@
 
 Разбирайте участки: `)});
 
+ $("#uuu").click(function(){$("#gather_text").val($("#gather_text").val() + ` 1 - 
+2 - 
+3 - 
+4 - 
+5 - 
+6 - 
+7 - 
+8 - 
+9 - 
+10 - 
+11 - 
+12 - 
+13 - 
+14 - 
+15 - 
+16 - 
+17 - 
+18 - `)});
+
         //участники
         $("#id_558232").click(function(){$("#gather_text").val($("#gather_text").val() + "@id549802204 (Огнедышащий);")});
         $("#id_815221").click(function(){$("#gather_text").val($("#gather_text").val() + "@id39409026 (Наст);")});
@@ -265,7 +288,7 @@
         $("#id_748150").click(function(){$("#gather_text").val($("#gather_text").val() + "@id326501785 (Цветущий Сумрак);")});
         $("#id_1142909").click(function(){$("#gather_text").val($("#gather_text").val() + "@id316649308 (Маковка);")});
         $("#id_207429").click(function(){$("#gather_text").val($("#gather_text").val() + "@id368410948 (Ветродуй);")});
-        $("#id_1171777").click(function(){$("#gather_text").val($("#gather_text").val() + "@id511745584 (Закатолапа);")});
+        $("#id_1171777").click(function(){$("#gather_text").val($("#gather_text").val() + "@id511745584 (Закатоликая);")});
         $("#id_1132933").click(function(){$("#gather_text").val($("#gather_text").val() + "@id339711855 (Серебрянолистая);")});
         $("#id_873478").click(function(){$("#gather_text").val($("#gather_text").val() + "@id180297436 (Подозрение);")});
         $("#id_1210276").click(function(){$("#gather_text").val($("#gather_text").val() + "@id454860308 (Паутина Лжи);")});
@@ -277,7 +300,7 @@
         $("#id_1191564").click(function(){$("#gather_text").val($("#gather_text").val() + "@id424273784 (Тайностная);")});
         $("#id_1217073").click(function(){$("#gather_text").val($("#gather_text").val() + "@id460463845 (Пятнистый);")});
         $("#id_1276970").click(function(){$("#gather_text").val($("#gather_text").val() + "@id321305223 (Непослушная Кудряшка);")});
-        $("#id_1221254").click(function(){$("#gather_text").val($("#gather_text").val() + "@id442728760 (Пихтолапый);")});
+        $("#id_1221254").click(function(){$("#gather_text").val($("#gather_text").val() + "@id442728760 (Пихтовый);")});
         $("#id_1279598").click(function(){$("#gather_text").val($("#gather_text").val() + "@id646166902 (Лебедекрылый);")});
         $("#id_1124675").click(function(){$("#gather_text").val($("#gather_text").val() + "@id487775787 (Потерянная Душа);")});
         $("#id_1261041").click(function(){$("#gather_text").val($("#gather_text").val() + "@id383885399 (Мимолётное Видение);")});
@@ -304,7 +327,7 @@
         $("#id_1109237").click(function(){$("#gather_text").val($("#gather_text").val() + "@id292563823 (Взвывание);")});
         $("#id_1311549").click(function(){$("#gather_text").val($("#gather_text").val() + "@id488768542 (Травоспинка);")});
         $("#id_1304130").click(function(){$("#gather_text").val($("#gather_text").val() + "@id604702258 (Утиный);")});
-        $("#id_636190").click(function(){$("#gather_text").val($("#gather_text").val() + "@id490954113 (Шаловливолап);")});
+        $("#id_636190").click(function(){$("#gather_text").val($("#gather_text").val() + "@id490954113 (Шаловливый);")});
         $("#id_1313504").click(function(){$("#gather_text").val($("#gather_text").val() + "@id631863152 (Надеждолап);")});
         $("#id_1267275").click(function(){$("#gather_text").val($("#gather_text").val() + "@id350561859 (Остроцапый);")});
     </script>
