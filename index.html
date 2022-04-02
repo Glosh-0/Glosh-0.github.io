@@ -96,18 +96,15 @@
                         <center><input type="text" id="search" onkeyup="searchFunction()" placeholder="Поиск" title="Поиск" maxlength="1"></center>
                         <div id="list_name">
                             <ul id="name">
-                            <li><br><b><a>В</a></b><br>
-                                <button id="id_1276481">Возродившаяся</button><br>
-                                </li>
                             <li><br><b><a>З</a></b><br>
                                 <button id="id_1171777">Закатоликая</button><br>
                             </li>
                             <li><br><b><a>И</a></b><br>
                                 <button id="id_915229">Ик</button><br>
                                 <button id="id_1123851">Искажённая Болью</button><br>
+                                <button id="id_1371415">Искреннее Сочувствие</button><br>
                             </li>
                             <li><br><b><a>К</a></b><br>
-                                <button id="id_1101992">Крадущий Паутину</button><br>
                                 <button id="id_757822">Княженика</button><br>
                             </li>
                             <li><br><b><a>Л</a></b><br>
@@ -117,12 +114,9 @@
                             </li>
                             <li><br><b><a>Н</a></b><br>
                                 <button id="id_1313504">Надеющийся</button><br>
-                                <button id="id_1311549">Наперстянка</button><br>
-                                <button id="id_1359262">Незримый</button><br>
                             </li>
                             <li><br><b><a>О</a></b><br>
                                 <button id="id_1233802">Огнехвостый</button><br>
-                                <button id="id_1326400">Отражение</button><br>
                                 <button id="id_1370050">Отчаявшийся</button><br>
                             </li>
                             <li><br><b><a>П</a></b><br>
@@ -132,20 +126,18 @@
                                 <button id="id_211729">Полуночная Разбойница</button><br>
                                 <button id="id_1386781">Предрассветный</button><br>
                                 <button id="id_1058831">Призрак</button><br>
-                                <button id="id_1386757">Пылание</button><br>
                             </li>
                             <li><br><b><a>Р</a></b><br>
                                 <button id="id_1382199">Разрушающий</button><br>
+                                <button id="id_1378548">Рассветная</button><br>
                             </li>
                             <li><br><b><a>С</a></b><br>
-                                <button id="id_1371415">Сопереживание</button><br>
-                                <button id="id_59092">Страстоцвет</button><br>
+                                <button id="id_1276481">Спасающая Души</button><br>
+                                <button id="id_1359262">Спящий Совёнок</button><br>
                             </li>
                             <li><br><b><a>Т</a></b><br>
                                 <button id="id_1191564">Тайностная</button><br>
-                            </li>
-                            <li><br><b><a>Х</a></b><br>
-                                <button id="id_1357243">Хищнозверь</button><br>
+                                <button id="id_842128">Тучка</button><br>
                             </li>
                             <li><br><b><a>Ц</a></b><br>
                                 <button id="id_748150">Цветущий Сумрак</button><br>
@@ -187,7 +179,7 @@
  участок: +;
  участок: +.
 Общее количество паутины за день: n.
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Потерянная Душа, Незримый.
+Ответственный за паутину: Чёрный Пёс, Потерянная Душа, Спящий Совёнок.
 
 Разбирайте участки: 1-2, 3-4, 5-6, 7-8, 9-10, 11-12, 13-14, 15-16.
 `)});
@@ -195,7 +187,7 @@
  участок: +;
  участок: +.
 Общее количество паутины за день: n.
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Потерянная Душа, Незримый.
+Ответственный за паутину: Чёрный Пёс, Потерянная Душа, Спящий Совёнок.
 
 Разбирайте участки: 1-2, 3-4, 5-6, 7-8, 9-10, 11-12, 13-14, 15-16, 17-18.
 `)});
@@ -209,7 +201,7 @@
 13 и 14 - 
 15 и 16 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Потерянная Душа, Незримый.
+Ответственный за паутину: Чёрный Пёс, Потерянная Душа, Спящий Совёнок.
 `)});
         $("#y_uch").click(function(){$("#gather_text").val($("#gather_text").val() + `1 и 2 - 
 3 и 4 - 
@@ -221,7 +213,7 @@
 15 и 16 - 
 17 и 18 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Потерянная Душа, Незримый.
+Ответственный за паутину: Чёрный Пёс, Потерянная Душа, Спящий Совёнок.
 `)});
 
  $("#drobi").click(function(){$("#gather_text").val($("#gather_text").val() + `Дробные участки занимаются в любой последовательности. 
@@ -248,11 +240,10 @@
 17 - 
 18 - 
 
-Ответственный за паутину: Крадущий Паутину, Чёрный Пёс, Потерянная Душа, Незримый.
+Ответственный за паутину: Чёрный Пёс, Потерянная Душа, Спящий Совёнок.
 `)});
 
         //участники
-        $("#id_1101992").click(function(){$("#gather_text").val($("#gather_text").val() + "@id449476656 (Крадущий Паутину);")});
         $("#id_748150").click(function(){$("#gather_text").val($("#gather_text").val() + "@id326501785 (Цветущий Сумрак);")});
         $("#id_1171777").click(function(){$("#gather_text").val($("#gather_text").val() + "@id511745584 (Закатоликая);")});
         $("#id_1210276").click(function(){$("#gather_text").val($("#gather_text").val() + "@id454860308 (Паутина Лжи);")});
@@ -260,8 +251,7 @@
         $("#id_1191564").click(function(){$("#gather_text").val($("#gather_text").val() + "@id424273784 (Тайностная);")});
         $("#id_1279598").click(function(){$("#gather_text").val($("#gather_text").val() + "@id646166902 (Лебедекрылый);")});
         $("#id_1124675").click(function(){$("#gather_text").val($("#gather_text").val() + "@id487775787 (Потерянная Душа);")});
-        $("#id_1276481").click(function(){$("#gather_text").val($("#gather_text").val() + "@id351680930 (Возродившаяся);")});
-        $("#id_1311549").click(function(){$("#gather_text").val($("#gather_text").val() + "@id488768542 (Наперстянка);")});
+        $("#id_1276481").click(function(){$("#gather_text").val($("#gather_text").val() + "@id351680930 (Спасающая Души);")});
         $("#id_636190").click(function(){$("#gather_text").val($("#gather_text").val() + "@id490954113 (Легковерный Шалунишка);")});
         $("#id_1313504").click(function(){$("#gather_text").val($("#gather_text").val() + "@id631863152 (Надеющийся);")});
         $("#id_915229").click(function(){$("#gather_text").val($("#gather_text").val() + "@id214895700 (Ик);")});
@@ -270,18 +260,16 @@
         $("#id_1123851").click(function(){$("#gather_text").val($("#gather_text").val() + "@id487014987 (Искажённая Болью);")});
         $("#id_1233802").click(function(){$("#gather_text").val($("#gather_text").val() + "@id486185356 (Огнехвостый);")});
         $("#id_1298701").click(function(){$("#gather_text").val($("#gather_text").val() + "@id565433809 (Лазурная Синева);")});
-        $("#id_1359262").click(function(){$("#gather_text").val($("#gather_text").val() + "@id497036359 (Незримый);")});
-        $("#id_1326400").click(function(){$("#gather_text").val($("#gather_text").val() + "@id584392773 (Отражение);")});
-        $("#id_1371415").click(function(){$("#gather_text").val($("#gather_text").val() + "@id617522349 (Сопереживание);")});
+        $("#id_1359262").click(function(){$("#gather_text").val($("#gather_text").val() + "@id497036359 (Спящий Совёнок);")});
+        $("#id_1371415").click(function(){$("#gather_text").val($("#gather_text").val() + "@id617522349 (Искреннее Сочувствие);")});
         $("#id_211729").click(function(){$("#gather_text").val($("#gather_text").val() + "@id575924283 (Полуночная Разбойница);")});
-        $("#id_59092").click(function(){$("#gather_text").val($("#gather_text").val() + "@id342260009 (Страстоцвет);")});
         $("#id_1370050").click(function(){$("#gather_text").val($("#gather_text").val() + "@id669442391 (Отчаявшийся);")});
-        $("#id_1357243").click(function(){$("#gather_text").val($("#gather_text").val() + "@id678881347 (Хищнозверь);")});
         $("#id_1382199").click(function(){$("#gather_text").val($("#gather_text").val() + "@id543898544 (Разрушающий);")});
         $("#id_1386781").click(function(){$("#gather_text").val($("#gather_text").val() + "@id606561633 (Предрассветный);")});
         $("#id_1058831").click(function(){$("#gather_text").val($("#gather_text").val() + "@id656920609 (Призрак);")});
-        $("#id_1386757").click(function(){$("#gather_text").val($("#gather_text").val() + "@id300656597 (Пылание);")});
         $("#id_757822").click(function(){$("#gather_text").val($("#gather_text").val() + "@id563010198 (Княженика);")});
+        $("#id_1378548").click(function(){$("#gather_text").val($("#gather_text").val() + "@id655854171 (Рассветная);")});
+        $("#id_842128").click(function(){$("#gather_text").val($("#gather_text").val() + "@id548944874 (Тучка);")});
     </script>
 </div>
 
@@ -396,18 +384,16 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
      <h2>СПИСОК ТУННЕЛЕРОВ</h2>
      <hr>
      <br>
-     <b>Главы отряда:</b> <a href="https://catwar.su/cat1101992">Крадущий Паутину</a> (<a href="https://vk.com/id449476656">VK</a>)
-     <a href="https://catwar.su/cat1258308">Чёрный Пёс</a> (<a href="https://vk.com/id570784447">VK</a>)<br>
+     <b>Глава отряда:</b> <a href="https://catwar.su/cat1258308">Чёрный Пёс</a> (<a href="https://vk.com/id570784447">VK</a>)<br>
      <br>
      <div id="list">
       <center><span class="subtitle">Туннелеры</span></center>
-      <br><b>В</b><br>
-      <a href="https://catwar.su/cat1276481">Возродившаяся</a> (<a href="https://vk.com/id351680930">VK</a>)<br>
       <br><b>З</b><br>
       <a href="https://catwar.su/cat1171777">Закатоликая</a> (<a href="https://vk.com/id511745584">VK</a>)<br>
       <br><b>И</b><br>
       <a href="https://catwar.su/cat915229">Ик</a> (<a href="https://vk.com/id214895700">VK</a>)<br>
       <a href="https://catwar.su/cat1123851">Искажённая Болью</a> (<a href="https://vk.com/id487014987">VK</a>)<br>
+      <a href="https://catwar.su/cat1371415">Искреннее Сочувствие</a> (<a href="https://vk.com/id617522349">VK</a>)<br>
       <br><b>К</b><br>
       <a href="https://catwar.su/cat757822">Княженика</a> (<a href="https://vk.com/id563010198">VK</a>)<br>
       <br><b>Л</b><br>
@@ -416,11 +402,8 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat1298701">Лазурная Синева</a> (<a href="https://vk.com/id565433809">VK</a>)<br>
       <br><b>Н</b><br>
       <a href="https://catwar.su/cat1313504">Надеющийся</a> (<a href="https://vk.com/id631863152">VK</a>)<br>
-      <a href="https://catwar.su/cat1311549">Наперстянка</a> (<a href="https://vk.com/id488768542">VK</a>)<br>
-      <a href="https://catwar.su/cat1359262">Незримый</a> (<a href="https://vk.com/id497036359">VK</a>)<br>
       <br><b>О</b><br>
       <a href="https://catwar.su/cat1233802">Огнехвостый</a> (<a href="https://vk.com/id486185356">VK</a>)<br>
-      <a href="https://catwar.su/cat1326400">Отражение</a> (<a href="https://vk.com/id584392773">VK</a>)<br>
       <a href="https://catwar.su/cat1370050">Отчаявшийся</a> (<a href="https://vk.com/id669442391">VK</a>)<br>
       <br><b>П</b><br>
       <a href="https://catwar.su/cat1210276">Паутина Лжи</a> (<a href="https://vk.com/id454860308">VK</a>)<br>
@@ -429,16 +412,15 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
       <a href="https://catwar.su/cat211729">Полуночная Разбойница</a> (<a href="https://vk.com/id575924283">VK</a>)<br>
       <a href="https://catwar.su/cat1386781">Предрассветный</a> (<a href="https://vk.com/id606561633">VK</a>)<br>
       <a href="https://catwar.su/cat1058831">Призрак</a> (<a href="https://vk.com/id656920609">VK</a>)<br>
-      <a href="https://catwar.su/cat1386757">Пылание</a> (<a href="https://vk.com/id300656597">VK</a>)<br>
       <br><b>Р</b><br>
       <a href="https://catwar.su/cat1382199">Разрушающий</a> (<a href="https://vk.com/id543898544">VK</a>)<br>
+      <a href="https://catwar.su/cat1378548">Рассветная</a> (<a href="https://vk.com/id655854171">VK</a>)<br>
       <br><b>С</b><br>
-      <a href="https://catwar.su/cat1371415">Сопереживание</a> (<a href="https://vk.com/id617522349">VK</a>)<br>
-      <a href="https://catwar.su/cat59092">Страстоцвет</a> (<a href="https://vk.com/id342260009">VK</a>)<br>
+      <a href="https://catwar.su/cat1276481">Спасающая Души</a> (<a href="https://vk.com/id351680930">VK</a>)<br>
+      <a href="https://catwar.su/cat1359262">Спящий Совёнок</a> (<a href="https://vk.com/id497036359">VK</a>)<br>
       <br><b>Т</b><br>
       <a href="https://catwar.su/cat1191564">Тайностная</a> (<a href="https://vk.com/id424273784">VK</a>)<br>
-      <br><b>Х</b><br>
-      <a href="https://catwar.su/cat1357243">Хищнозверь</a> (<a href="https://vk.com/id678881347">VK</a>)<br>
+      <a href="https://catwar.su/cat842128">Тучка</a> (<a href="https://vk.com/id548944874">VK</a>)<br>
       <br><b>Ц</b><br>
       <a href="https://catwar.su/cat748150">Цветущий Сумрак</a> (<a href="https://vk.com/id326501785">VK</a>)<br>
       <br><b>Ш</b><br>
@@ -446,7 +428,7 @@ form.result_1_dop.value = Math.floor(result_1_min_dop) + min + Math.abs(result_1
   </center>
 </div>
 </div>
-<div style="font-size: smaller; text-align: right;">Последнее обновление: 10.03</div>
+<div style="font-size: smaller; text-align: right;">Последнее обновление: 02.04</div>
 </div>
 <script>
 $("a").attr('target', '_blank');
