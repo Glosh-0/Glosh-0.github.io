@@ -273,6 +273,255 @@
     </script>
 </div>
 
+function blog() {
+    /*TEST*/
+    /*
+          $(document).ready(function() {
+              $('body').on('click', '.comment-delete', function(e) {
+                  e.preventDefault()
+                  console.log($(this).parent().text());
+              });
+          });*/
+    if (globals.on_reports) {
+      $(document).ready(function () {
+        addCSS(`.inp-button {background-color: #333;color: #fff;border: 1px solid #000;font-family: Verdana;font-size: .9em;}`);
+        const blogID = +(pageurl.replace(/\D/g, ''));
+        let date;
+        date = new Date();
+        date.setTime(date.getTime() + (date.getTimezoneOffset() + 180) * 60 * 1000);
+        const date_str = date.getFullYear() + '-' + leadZero(date.getMonth() + 1) + '-' + leadZero(date.getDate());
+        let my_id_div = `<div>Ваш ID:&nbsp;<input type="text" class="cws-input" pattern="[0-9]+" style="width: 145px;" id="cws_blog_myid" required="true" placeholder="123456" value="${globals.my_id ? globals.my_id : ''}"> <input type="checkbox" checked id="remember_id"><label for="remember_id">Запомнить</label></div>`;
+
+        function rememberMyID(my_id) {
+          if ($('#remember_id').prop('checked') && !isNaN(my_id) && my_id) { //запомнить
+            setSettings('my_id', my_id);
+          }
+        }
+        addCSS(`/*.cws_tabs_content { display: none; } .cws_tabs_content.active { display: block; }*/
+.cws_tabs_caption {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  list-style: none;
+  position: relative;
+  margin: 0;
+  padding-inline-start:0px;
+}
+.cws_tabs_caption li {
+  padding: 1px 12px;
+  margin: 0 2px 0 0;
+  background: #333;
+  color: #FFF;
+  position: relative;
+  border: solid #000;
+  border-width: 1px;
+  text-align: center;
+}
+.cws_tabs_caption li:not(.active) {
+  cursor: pointer;
+}
+.cws_tabs_caption li:not(.active):hover {
+  background: #444;
+  border-color: #666;
+}
+.cws_tabs_caption .active {
+  background: #444;
+  color: #fff;
+  border-color: #666;
+}`);
+
+if (blogID == 13219) { // чистильщики
+          $('#send_comment').append(`
+<hr>
+<h3>Автоматическое заполнение отчётов</h3>
+<hr>
+${my_id_div}
+<hr>
+<div>
+  <select id="cws_clean_grp">
+    <option>I группа</option>
+    <option>II группа</option>
+  </select>
+</div>
+<hr>
+<div>
+  Автоматическое составление отчёта через историю, сгенерированную модом. <u>ВСЯ</u> история должна придерживаться одного вида, включая такие опции, как:
+  <ul>
+  <li>ID поднятого/опущенного;</li>
+  <li>должность поднятого/опущенного;</li>
+  <li>статус поднятого;</li>
+  <li>локацию, в которой кот был поднят/опущен.</li>
+  </ul>
+</div>
+<div>
+  <textarea id="r03_clean_text" style="width: 95%;resize: none;" rows="11" placeholder="История очищена. Проверил старшего воителя по имени Мститель. Поднял старшего воителя по имени Мститель (1131876) [ Спит ] в локации «Камышовая поляна». Опустил на землю старшего воителя по имени Мститель (1131876) в локации «Тёмная пещера»."></textarea>
+</div>
+<div>
+</div>
+<button class="inp-button" id="r03_clean1">Заполнить отчет</button>
+`);
+          $('#r03_clean1').on('click', function () {
+            let expr_pickup = new RegExp('(Подняла? ([А-яЁё ]+) по имени [А-яЁё ]+ \\((\\d+)\\) (\\[[А-яЁё ]+\\]) в локации «([А-яЁё ]+)»\\.|Опустила? на землю ([А-яЁё ]+) по имени [А-яЁё ]+ \\((\\d+)\\) в локации «([А-яЁё ]+)»\\.)', "ig");
+            let text = $('#r03_clean_text').val();
+            let match_pickup = Array.from(text.matchAll(expr_pickup));
+            let good_cats = {};
+            let current_cats = [];
+            const titles = {
+              "котёнка": "Котята",
+              "оруженосца": "Оруженосцы",
+              "воителя": "Воители",
+              "воительницу": "Воители",
+              "королеву": "Воители",
+              "старшего воителя": "Воители",
+              "старшую воительницу": "Воители",
+            };
+            const places_from = {
+              "Поляна для сна": "Поляна для сна",
+              "Камышовая поляна": "Лагерь",
+              "Мшистая полянка": "Лагерь",
+              "Тенистая поляна": "Лагерь",
+              "Дальний уголок": "Лагерь",
+              "Грязное место": "Лагерь",
+              "Куча с добычей": "Лагерь",
+              "Старый вяз": "Лагерь",
+              "Полянка для игр": "Лагерь",
+              "Лужайка для игр": "Лагерь",
+              "Окутанный тайнами лужок": "Лагерь",
+              "Неглубокий ручей": "Лагерь",
+              "Детская": "Номерные",
+              "Палатка оруженосцев": "Номерные",
+              "Палатка воителей": "Номерные",
+              "Поляна для тренировок": "Поляна для Тренировок",
+              "Просторное местечко": "Поляна для Тренировок",
+              "Расцарапанные камушки": "Поляна для Тренировок",
+              "Тренировочный овраг": "Поляна для Тренировок",
+              "Боевая поляна": "Поляна для Тренировок",
+              "Юркая ложбинка": "Поляна для Тренировок",
+              "Местечко для тренировок": "Поляна для Тренировок",
+              "Пещера танцующих когтей": "Поляна для Тренировок",
+              "Камышовые заросли": "ВЛ",
+              "Галечный берег": "ВЛ",
+              "Шелестящий тростник": "ВЛ",
+              "Междуречье": "ВЛ",
+              "Скользкие камни": "ВЛ",
+              "Лягушатник": "ВЛ",
+              "Мелководье": "ВЛ",
+              "Торфяник": "ВЛ",
+              "Пруд ужей": "ВЛ",
+              "Тёплый ручеёк": "ВЛ",
+              "Приток": "ВЛ",
+              "Тихие воды": "ВЛ",
+              "Плоские валуны": "ВЛ",
+              "Воды у корней старой ивы": "ВЛ",
+              "Глубокие воды": "ВЛ",
+              "Ледяная вода": "ВЛ",
+              "Течение": "ВЛ",
+              "Устье реки": "ВЛ",
+              "Спокойный поток": "ВЛ",
+              "Каменная гряда": "ВЛ",
+              "Разрушенная ограда": "ВЛ",
+              "Расколотое дерево": "ВЛ",
+              "Лесной ручеёк": "ВЛ",
+              "Плакучая ива": "ВЛ",
+              "Травянистый берег": "ВЛ",
+              "Грохочущая тропа Двуногих": "ВЛ",
+              "Редколесье": "ВЛ",
+              "Граница между Тенями и Рекой": "ВЛ",
+              "Граница между Ветром и Рекой": "ВЛ",
+              "Нагретые камни": "ВЛ",
+              "Одинокий склон": "ВЛ",
+              "Дубрава": "ВЛ",
+              "Тихий берег": "ВЛ",
+              "Заросший берег": "ВЛ",
+              "Пологий берег": "ВЛ",
+              "Каменистый берег": "ВЛ",
+              "Скалистые холмы": "Нейтральные",
+              "Лунный ручей": "Нейтральные",
+              "Лунный камень": "Нейтральные",
+              "Предгорья": "Нейтральные",
+              "Горы": "Нейтральные",
+              "Туннели": "Нейтральные",
+              "Воющие коридоры": "Нейтральные",
+              "Ярусы сомнения": "Нейтральные",
+            };
+            const bad_statuses = ["[ На удалении ]", "[ Заблокирован ]", "[ В подстилках ]"];
+            const good_statuses = ["[ В игре ]", "[ Недавно ушёл ]", "[ Недавно ушла ]"];
+            $.each(match_pickup, function (index, value) {
+              if (value[2] !== undefined) { // Поднятие: 2 должность, 3 статус, 4 айди, 5 локация
+                let id = value[3],
+                  title_grp = titles[value[2]],
+                  place = value[5];
+                place = (places_from[place]) ? places_from[place] : place;
+                if (jQuery.inArray(value[4], bad_statuses) !== -1) {
+                  title_grp = "Заблокированные";
+                }
+                if (place !== undefined && (value[4] == "[ Спит ]" || title_grp == "Заблокированные")) {
+                  current_cats[id] = {
+                    "title_grp": title_grp,
+                    "place": place
+                  };
+                }
+              }
+              else { // Опускание: 6 должность, 7 айди, 8 локация
+                let id = value[7];
+                if (current_cats[id] !== undefined) {
+                  let title_grp = current_cats[id].title_grp,
+                    place = current_cats[id].place;
+                  if (good_cats[place] === undefined) {
+                    good_cats[place] = {};
+                    good_cats[place]["Воители"] = [];
+                    good_cats[place]["Оруженосцы"] = [];
+                    good_cats[place]["Котята"] = [];
+                    good_cats[place]["Заблокированные"] = [];
+                  }
+                    if (good_cats[place][title_grp]) {
+                        good_cats[place][title_grp].push(id);
+                    }
+                  current_cats[id] = undefined;
+                }
+              }
+            });
+            let my_id = parseInt($('#cws_blog_myid').val());
+            let group = $('#cws_clean_grp').val();
+            let my_id_mask = (isNaN(my_id)) ? 'Некорректный ID' : masking(my_id, '[cat%ID%] [%ID%]');
+            let report = `1. ${my_id_mask}.\n2. ${group}.\n3. `;
+            $.each(good_cats, function (place, groups) {
+              if (group == "II группа") {
+                  report += `[b]${place}:[/b] `;
+                  let list = [];
+                  let list_blocked = [];
+                  $.each(groups, function (victim_group, arr) {
+                      if (victim_group == "Заблокированные") {
+                          list_blocked = list_blocked.concat(arr);
+                      } else {
+                          list = list.concat(arr);
+                      }
+                  });
+                  report += `${list.join(' ')}\n`;
+                  if (list_blocked.length) {
+                      report += `[u]${list_blocked.join(' ')}[/u]\n`;
+                  }
+              } else {
+                  report += `[b]${place}:[/b]\n`;
+                  $.each(groups, function (victim_group, arr) {
+                      if (arr.length) {
+                          if (victim_group == "Заблокированные") {
+                              report += `[u]${arr.join(' ')}[/u]\n`;
+                          } else {
+                              report += `${victim_group}: ${arr.join(' ')}\n`;
+                          }
+                      }
+                  });
+              }
+            });
+            report += (group == "II группа") ? `4. [ СКРИН С МОДЕЛЬКОЙ КОТА (ДЛЯ II ГРУППЫ) ]\n5. ` : `4. `;
+            report += `[header=${my_id}]История[/header][block=${my_id}]${text}[/block]`;
+            $('#comment').val(report).scrollintoview();
+          });
+
 <!-- калькулятор -->
 <div id="calculator_block">
     <br>
