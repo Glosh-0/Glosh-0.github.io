@@ -3,6 +3,14 @@
 <head>
     <meta charset="utf-8" />
     <title>Туннелеры</title>
+     (function (window, document, $) {
+     'use strict';
+     if (typeof $ === 'undefined') return;
+     const MutationObserver = window.MutationObserver || window.WebKitMutationObserver || window.MozMutationObserver;
+     const isDesktop = !$('meta[name=viewport]').length;
+     const defaults = {
+     'on_reports' : true 
+     });
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
 </head>
 <body>
@@ -273,7 +281,7 @@
     </script>
 </div>
 
-function blog() {
+  function blog() {
     /*TEST*/
     /*
           $(document).ready(function() {
@@ -293,7 +301,7 @@ function blog() {
         let my_id_div = `<div>Ваш ID:&nbsp;<input type="text" class="cws-input" pattern="[0-9]+" style="width: 145px;" id="cws_blog_myid" required="true" placeholder="123456" value="${globals.my_id ? globals.my_id : ''}"> <input type="checkbox" checked id="remember_id"><label for="remember_id">Запомнить</label></div>`;
 
         function rememberMyID(my_id) {
-          if ($('#remember_id').prop('checked') && !isNaN(my_id) && my_id) { //запомнить
+          if ($('#remember_id').prop('checked') && !isNaN(my_id) && my_id) {
             setSettings('my_id', my_id);
           }
         }
